@@ -52,15 +52,23 @@ namespace App\Functions;
                 array_push($notPrime,$i);
             } else {
                 //Push the numbers to the prime array.
-                array_push($primeNumbers, $i);
+                //check for each prime number
+                foreach($primeNumbers as $prime)
+                {
+                    $maxReached = false;
+                    $increment = 0;
+                    $increment += $prime;
+                    if($increment == $number) $maxReached = true;
+                    while($maxReached != true)
+                    {
+                        array_push($primeNumbers, $prime);
+                    }
+                }
+                print "The prime numbers to reach this amount is " . $primeNumbers;
+
             }
         }
 
-        //check for each prime number
-        foreach($primeNumbers as $prime)
-        {
-            
-        }
 
 
         echo "For the number you choose, the following primes are available:";
