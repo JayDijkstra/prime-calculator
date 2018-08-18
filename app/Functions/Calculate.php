@@ -53,27 +53,35 @@ namespace App\Functions;
             } else {
                 //Push the numbers to the prime array.
                 //check for each prime number
-                foreach($primeNumbers as $prime)
-                {
-                    $maxReached = false;
-                    $increment = 0;
-                    $increment += $prime;
-                    if($increment == $number) $maxReached = true;
-                    while($maxReached != true)
-                    {
-                        array_push($primeNumbers, $prime);
-                    }
-                }
-                print "The prime numbers to reach this amount is " . $primeNumbers;
-
+                array_push($primeNumbers, $i);
             }
         }
 
+        //Create a Array to store the final sum.
+        $finalArray = [];
 
+        //Check the sum of the array.
+        foreach($primeNumbers as $prime)
+        {
+            for($i = $prime[0]; $i < $primeNumbers; $i++)
+            {
+                sleep(2);
+                $finalArray[] = $prime+$i;
+                print_r($finalArray);
+                if(array_sum($finalArray) == $number) echo "Maxiumum reached";
+
+
+            }
+        }
+        
+
+//        print_r($primeNumbers);
+
+        echo "\n";
 
         echo "For the number you choose, the following primes are available:";
         echo "\n";
-        print_r (array_sum($primeNumbers));
+//        print_r ($primeNumbers);
 
 
 
