@@ -56,9 +56,16 @@ namespace App\Functions;
             }
         }
 
+        //check for each prime number
+        foreach($primeNumbers as $prime)
+        {
+            
+        }
+
+
         echo "For the number you choose, the following primes are available:";
         echo "\n";
-        print_r ($primeNumbers);
+        print_r (array_sum($primeNumbers));
 
 
 
