@@ -15,39 +15,56 @@ class Prime
         $notPrime = [];
         //Create an Boolean to check if an Prime number is found
         $primeFound = true;
-        //For each number till the maximum input
-        for ($i = 2; $i < $number; $i++) {
-            //check if each number till the maximum number given is a prime
-            for($j = 2; $j < $i; $j++)
+
+
+
+        //Foreach number till the given amount check if it is a prime number
+        for($i = 2; $i < $number; $i++)
+        {
+
+            $n = abs($i);
+
+
+
+            //Take some pre-steps before checking if a number really is prime or not
+            if($i == 1)
             {
-                if($i % $j == 0)
-                {
-                    //This is not a prime number
-                    $primeFound = false;
-                }
-                if($primeFound)
-                {
-                    array_push($primeNumbers, $j);
-                    $primeFound = true;
-                }
-                else {
-                    array_push($notPrime,$j);
-                }
+                //1 is not a prime number.. add it to the not a prime array.
+                array_push($notPrime, $i);
+            }
+            if($i == 2)
+            {
+                //Prime is the only EVEN number, as it can be divided by 1 and it self.
+                array_push($primeNumbers, $i);
             }
 
+            /**
+             * Use a function to check if the numbers are Prime or not. Also Square the numbers
+             * To Check if It is a Prime or not.
+             */
+            if($n % 2 == 0)
+            {
+                array_push($notPrime, $i);
+            } else {
+                array_push($primeNumbers, $i);
+            }
         }
-
+        print_r($primeNumbers);
+        exit;
         //Create a Array to store the final sum.
         $finalArray = [];
 
         //Check the sum of the array.
         foreach (array_values($primeNumbers) as $prime) {
             sleep(1);
-            $finalArray[] += $prime;
-            print_r($finalArray);
-            if (array_sum($finalArray) == $number || array_sum($finalArray) > $number) exit;
-            print(array_sum($finalArray));
-            //notify there are still more primes to come.
+
+            echo $prime;
+
+//            $finalArray[] += $prime;
+//            print_r($finalArray);
+//            if (array_sum($finalArray) == $number || array_sum($finalArray) > $number) exit;
+//            print(array_sum($finalArray));
+//            //notify there are still more primes to come.
             echo "Still more Primes coming";
         }
 
