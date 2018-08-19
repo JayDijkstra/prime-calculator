@@ -7,6 +7,9 @@ namespace App\Functions;
  */
 class Prime
 {
+
+    public $loadingtext = "The Program Is Calculating.";
+
     /**
      * Function to check out all the numbers before the given number.
      * Another function is called to check if these numbers are prime or not.
@@ -38,28 +41,40 @@ class Prime
 
         //Create a Array to store the final sum.
         $finalArray = [];
-
+        //Create a array to store the consecutive primes.
+        $primeArray = [];
         //Check the sum of the array.
         foreach (array_values($primeNumbers) as $prime) {
             //For Each Number wait one second to show the next one
             sleep(1);
-            echo $prime;
             //Create an array and calculate all primes with eachother to calculate if the max number is reached.
             $finalArray[] += $prime;
             //Check if the sum of the array is equal to the given number.
-            if (array_sum($finalArray) >= $number) exit;
-            echo "\n";
-            //notify there are still more primes to come.
-            echo "Still more Primes coming";
+            if (array_sum($finalArray) >= $number) {
+                $this->finalize($primeArray, $number);
+                exit;
+            };
+            array_push($primeArray, $prime);
+            echo $this->loadingtext . ".";
+        }
+    }
+    /**
+     * @param $array
+     */
+    public function finalize($array, $number)
+    {
+        //Show the user the output of the chosen number.
+        echo "The longest sum of consecutive primes that adds to a prime below the number ". $number . " is ";
+        //Create a white line for a better overview.
+        echo "\n";
+        //For each item in the Array
+        foreach($array as $prime)
+        {
+            //Print it to the console
+            echo "$prime";
+            //Seperate it on a new line
             echo "\n";
         }
-
-
-        echo "The longest sum of consecutive primes that adds to a prime below the number " . $number . ' is';
-        print_r($primeNumbers);
-        echo "The highest prime is  " . end($primeNumbers);
-        echo "\n";
-
     }
 
 
