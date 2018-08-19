@@ -7,75 +7,81 @@ namespace App\Functions;
  */
 class Prime
 {
-    public function IsThisPrime($number)
+    /**
+     * Function to check out all the numbers before the given number.
+     * Another function is called to check if these numbers are prime or not.
+     * These numbers are seperatly added to different Arrays.
+     * @param $number
+     */
+    public function calculateIfPrime($number)
     {
         //Create an array to hold numbers that ARE prime.
         $primeNumbers = [];
         //Create an Array to hold numbers that are NOT prime.
         $notPrime = [];
-        //Create an Boolean to check if an Prime number is found
-        $primeFound = true;
 
-
-
-        //Foreach number till the given amount check if it is a prime number
-        for($i = 2; $i < $number; $i++)
-        {
-
-            $n = abs($i);
-
-
-
-            //Take some pre-steps before checking if a number really is prime or not
-            if($i == 1)
+        //Check for earch number if there is a Prime number between them.
+        for($i = 2; $i < $number; $i++) {
+            //Create a variable for each checkable number.
+            $primer = $this->checkIfPrime($i);
+            if ($primer == 0)
             {
-                //1 is not a prime number.. add it to the not a prime array.
+                //If the function returns a 0; or false, add this number to the non-prime array
                 array_push($notPrime, $i);
             }
-            if($i == 2)
-            {
-                //Prime is the only EVEN number, as it can be divided by 1 and it self.
-                array_push($primeNumbers, $i);
-            }
-
-            /**
-             * Use a function to check if the numbers are Prime or not. Also Square the numbers
-             * To Check if It is a Prime or not.
-             */
-            if($n % 2 == 0)
-            {
-                array_push($notPrime, $i);
-            } else {
+            else {
+                //if the function returns a 1; or true, add this number to the prime array.
                 array_push($primeNumbers, $i);
             }
         }
-        print_r($primeNumbers);
-        exit;
+
+
         //Create a Array to store the final sum.
         $finalArray = [];
 
         //Check the sum of the array.
         foreach (array_values($primeNumbers) as $prime) {
+            //For Each Number wait one second to show the next one
             sleep(1);
-
             echo $prime;
-
-//            $finalArray[] += $prime;
-//            print_r($finalArray);
-//            if (array_sum($finalArray) == $number || array_sum($finalArray) > $number) exit;
-//            print(array_sum($finalArray));
-//            //notify there are still more primes to come.
+            //Create an array and calculate all primes with eachother to calculate if the max number is reached.
+            $finalArray[] += $prime;
+            //Check if the sum of the array is equal to the given number.
+            if (array_sum($finalArray) >= $number) exit;
+            echo "\n";
+            //notify there are still more primes to come.
             echo "Still more Primes coming";
+            echo "\n";
         }
 
+
+        echo "The longest sum of consecutive primes that adds to a prime below the number " . $number . ' is';
         print_r($primeNumbers);
-
+        echo "The highest prime is  " . end($primeNumbers);
         echo "\n";
 
-        echo "For the number you choose, the following primes are available:";
-        echo "\n";
-        print_r ($primeNumbers);
+    }
 
 
+    /**
+     * Function to calculate if a number is prime or not.
+     * @param int $number
+     * @return int
+     */
+    public function checkIfPrime(int $number)
+    {
+        //For the number given.
+        for ($x =2; $x < $number; $x++)
+        {
+            //Check if the number modulo 2 == equal to zero, if it is then this is not a prime.
+            if($number % $x == 0)
+            {
+                //return false
+                return 0;
+
+            }
+        }
+        //For every other number return true.
+        return 1;
     }
 }

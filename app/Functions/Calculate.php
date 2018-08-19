@@ -19,11 +19,6 @@ namespace App\Functions;
     //Echo a new line to give the user a more human friendly view of the command line application.
     echo "\n";
     $prime = new Prime;
-    $prime->IsThisPrime(intval($line));
-
-
-
-//    prime(intval($line));
-
+    $prime->calculateIfPrime(intval($line));
 
 ?>

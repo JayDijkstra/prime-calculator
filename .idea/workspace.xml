@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app/Functions/Prime.php" description="$finalArray[] += $prime;" line="47" />
+    <bookmark url="file://$PROJECT_DIR$/app/Functions/Prime.php" description="//            //Take some pre-steps before checkin..." line="23" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3ac567-f881-4d13-9d01-b1f303b8aaf0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Functions/Calculate.php" afterPath="$PROJECT_DIR$/app/Functions/Calculate.php" />
       <change beforePath="$PROJECT_DIR$/app/Functions/Prime.php" afterPath="$PROJECT_DIR$/app/Functions/Prime.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,21 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Calculate.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Calculate.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Functions/Calculate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="627">
+              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Prime.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Prime.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Functions/Prime.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1101">
-              <caret line="48" column="2" lean-forward="false" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+            <state relative-caret-position="1848">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,8 +61,8 @@
         <option value="$PROJECT_DIR$/Functions/index.php" />
         <option value="$PROJECT_DIR$/Functions/Calculate.php" />
         <option value="$PROJECT_DIR$/app/index.php" />
-        <option value="$PROJECT_DIR$/app/Functions/Calculate.php" />
         <option value="$PROJECT_DIR$/app/Functions/Prime.php" />
+        <option value="$PROJECT_DIR$/app/Functions/Calculate.php" />
       </list>
     </option>
   </component>
@@ -68,7 +73,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-12" />
     <option name="width" value="1560" />
     <option name="height" value="1660" />
@@ -154,15 +159,15 @@
       <updated>1534610157749</updated>
       <workItem from="1534610158880" duration="2942000" />
       <workItem from="1534613154934" duration="4596000" />
-      <workItem from="1534623698880" duration="7292000" />
+      <workItem from="1534623698880" duration="12047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14830000" />
+    <option name="totallyTimeSpent" value="19585000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3098" height="1674" extended-state="6" />
+    <frame x="-12" y="0" width="1560" height="1660" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3153527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -193,7 +198,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -238,18 +243,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Functions/Calculate.php">
+    <entry file="file://$PROJECT_DIR$/app/Functions/Prime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="1848">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Functions/Prime.php">
+    <entry file="file://$PROJECT_DIR$/app/Functions/Calculate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1101">
-          <caret line="48" column="2" lean-forward="false" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+        <state relative-caret-position="627">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding />
         </state>
       </provider>
